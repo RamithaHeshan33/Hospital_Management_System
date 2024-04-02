@@ -1,0 +1,44 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 2, 2024, 6:42:39 PM
+    Author     : User
+*/
+
+
+.white-bg {
+    -fx-background-color: #fff;
+    
+}
+
+.radius {
+    -fx-background-radius: 6px;
+    
+}
+
+.textfield-1 {
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+
+.textfield-1:focused {
+    -fx-border-color: linear-gradient(to bottom right,#1ea6c4,#30419c);
+    -fx-border-width: 1px;
+    
+}
+
+.btn-1 {
+    -fx-background-color: linear-gradient(to bottom right,#1ea6c4,#30419c);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    
+}
+
+.btn-1:hover {
+    -fx-background-color: linear-gradient(to bottom right,#19a7d7,#495fcc);
+}
