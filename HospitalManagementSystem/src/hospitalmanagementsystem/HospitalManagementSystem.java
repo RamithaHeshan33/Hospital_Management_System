@@ -22,6 +22,11 @@ public class HospitalManagementSystem extends Application {
         
         Scene scene = new Scene(root);
         
+        stage.setMinWidth(347);
+        stage.setMinHeight(580);
+        
+        stage.setTitle("Hostpital Management System");
+        
         stage.setScene(scene);
         stage.show();
     }
