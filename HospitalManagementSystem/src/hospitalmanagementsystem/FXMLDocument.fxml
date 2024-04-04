@@ -58,7 +58,7 @@
                   <Label layoutX="65.0" layoutY="504.0" text="Have no account yet?" />
                   <Hyperlink fx:id="login_registerHere" layoutX="186.0" layoutY="501.0" onAction="#switchForm" text="Register Here" />
                </children></AnchorPane>
-            <AnchorPane fx:id="register_form" layoutX="10.0" layoutY="10.0" prefHeight="550.4" prefWidth="330.4" styleClass="white-bg" stylesheets="@../design/pageDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="register_form" layoutX="10.0" layoutY="10.0" prefHeight="550.4" prefWidth="330.4" styleClass="white-bg" stylesheets="@../design/pageDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <FontAwesomeIcon fill="#1ea6c4" glyphName="USER_PLUS" layoutX="131.0" layoutY="90.0" size="5em" />
                   <Label layoutX="90.0" layoutY="99.0" text="Register Account" textFill="#1ea6c4">

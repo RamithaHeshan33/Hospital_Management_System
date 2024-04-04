@@ -182,11 +182,11 @@ public class FXMLDocumentController implements Initializable {
                 }
                 
                 else if (register_password.getText().length() < 8) {
-                    alert.errorMessage("Invalid Message!! At least 8 characters required!!");
+                    alert.errorMessage("Invalid Password!! At least 8 characters required!!");
                 }
                 
                 else {
-                    String insertDataa = "INSERT INTO admin (email, username, password, data) VALUES (?,?,?,?)";
+                    String insertDataa = "INSERT INTO admin (email, username, password, date) VALUES (?,?,?,?)";
 
                     Date date = new Date();
                     java.sql.Date sqlDate = new java.sql.Date(date.getTime());
