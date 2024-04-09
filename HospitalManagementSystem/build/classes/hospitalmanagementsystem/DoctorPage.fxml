@@ -17,25 +17,27 @@
    <children>
       <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <AnchorPane fx:id="login_form" prefHeight="550.4" prefWidth="340.0" styleClass="white-bg" stylesheets="@../design/pageDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="login_form" prefHeight="550.4" prefWidth="340.0" styleClass="white-bg" stylesheets="@../design/pageDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <FontAwesomeIcon fill="#1ea6c4" glyphName="USER" layoutX="141.0" layoutY="91.0" size="5em" />
+                  <FontAwesomeIcon fill="#1ea6c4" glyphName="USER_MD" layoutX="141.0" layoutY="91.0" size="5em" />
                   <Label layoutX="103.0" layoutY="100.0" text="Login Account" textFill="#1ea6c4">
                      <font>
                         <Font name="Tahoma" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="130.0" layoutY="126.0" text="Admin Portal" />
-                  <TextField fx:id="login_username" layoutX="40.0" layoutY="158.0" prefHeight="30.0" prefWidth="250.0" promptText="Username" stylesheets="@../design/pageDesign.css">
+                  <Label layoutX="130.0" layoutY="126.0" text="Doctor Portal" />
+                  <TextField fx:id="login_doctorID" layoutX="40.0" layoutY="158.0" prefHeight="30.0" prefWidth="250.0" promptText="Doctor ID" stylesheets="@../design/pageDesign.css">
                      <styleClass>
                         <String fx:value="textfield-1" />
                         <String fx:value="white-bg" />
-                     </styleClass></TextField>
+                     </styleClass>
+                  </TextField>
                   <PasswordField fx:id="login_password" layoutX="40.0" layoutY="199.0" prefHeight="30.0" prefWidth="250.0" promptText="Password" stylesheets="@../design/pageDesign.css">
                      <styleClass>
                         <String fx:value="white-bg" />
                         <String fx:value="textfield-1" />
-                     </styleClass></PasswordField>
+                     </styleClass>
+                  </PasswordField>
                   <TextField fx:id="login_showPassword" layoutX="40.0" layoutY="199.0" prefHeight="30.0" prefWidth="250.0" promptText="Password" stylesheets="@../design/pageDesign.css" visible="false">
                      <styleClass>
                         <String fx:value="textfield-1" />
@@ -50,15 +52,17 @@
                      </styleClass>
                   </Button>
                   <FontAwesomeIcon fill="#1ea6c4" glyphName="HOSPITAL_ALT" layoutX="136.0" layoutY="407.0" size="6em" />
-                  <ComboBox fx:id="login_user" layoutX="90.0" layoutY="439.0" onAction="#switchPage" prefHeight="30.0" prefWidth="150.0" promptText="Select User" stylesheets="@../design/pageDesign.css">
+                  <ComboBox fx:id="login_user" layoutX="90.0" layoutY="439.0" prefHeight="30.0" prefWidth="150.0" promptText="Select User" stylesheets="@../design/pageDesign.css">
                      <styleClass>
                         <String fx:value="textfield-1" />
                         <String fx:value="white-bg" />
-                     </styleClass></ComboBox>
+                     </styleClass>
+                  </ComboBox>
                   <Label layoutX="65.0" layoutY="504.0" text="Have no account yet?" />
                   <Hyperlink fx:id="login_registerHere" layoutX="186.0" layoutY="501.0" onAction="#switchForm" text="Register Here" />
-               </children></AnchorPane>
-            <AnchorPane fx:id="register_form" layoutX="10.0" layoutY="10.0" prefHeight="550.4" prefWidth="330.4" styleClass="white-bg" stylesheets="@../design/pageDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="register_form" layoutX="10.0" layoutY="10.0" prefHeight="550.4" prefWidth="330.4" styleClass="white-bg" stylesheets="@../design/pageDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <FontAwesomeIcon fill="#1ea6c4" glyphName="USER_PLUS" layoutX="131.0" layoutY="90.0" size="5em" />
                   <Label layoutX="90.0" layoutY="99.0" text="Register Account" textFill="#1ea6c4">
@@ -66,20 +70,26 @@
                         <Font name="Tahoma" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="130.0" layoutY="126.0" text="Admin Portal" />
-                  <TextField fx:id="register_email" layoutX="39.0" layoutY="184.0" prefHeight="30.0" prefWidth="250.0" promptText="Email Address" stylesheets="@../design/pageDesign.css">
+                  <Label layoutX="130.0" layoutY="126.0" text="Doctor Portal" />
+                  <TextField fx:id="register_fullName" layoutX="39.0" layoutY="157.0" prefHeight="30.0" prefWidth="250.0" promptText="Full Name" stylesheets="@../design/pageDesign.css">
                      <styleClass>
                         <String fx:value="textfield-1" />
                         <String fx:value="white-bg" />
                      </styleClass>
                   </TextField>
-                  <TextField fx:id="register_username" layoutX="39.0" layoutY="223.0" prefHeight="30.0" prefWidth="250.0" promptText="Username" stylesheets="@../design/pageDesign.css">
+                  <TextField fx:id="register_email" layoutX="39.0" layoutY="196.0" prefHeight="30.0" prefWidth="250.0" promptText="Email Address" stylesheets="@../design/pageDesign.css">
                      <styleClass>
                         <String fx:value="textfield-1" />
                         <String fx:value="white-bg" />
                      </styleClass>
                   </TextField>
-                  <PasswordField fx:id="register_password" layoutX="39.0" layoutY="266.0" prefHeight="30.0" prefWidth="250.0" promptText="Password" stylesheets="@../design/pageDesign.css">
+                  <TextField fx:id="register_doctorID" layoutX="39.0" layoutY="235.0" prefHeight="30.0" prefWidth="250.0" promptText="Doctor ID" stylesheets="@../design/pageDesign.css">
+                     <styleClass>
+                        <String fx:value="textfield-1" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                  </TextField>
+                  <PasswordField fx:id="register_password" layoutX="39.0" layoutY="278.0" prefHeight="30.0" prefWidth="250.0" promptText="Password" stylesheets="@../design/pageDesign.css">
                      <styleClass>
                         <String fx:value="white-bg" />
                         <String fx:value="textfield-1" />
@@ -91,8 +101,8 @@
                         <String fx:value="white-bg" />
                      </styleClass>
                   </TextField>
-                  <CheckBox fx:id="register_checkBox" layoutX="39.0" layoutY="304.0" mnemonicParsing="false" onAction="#registerShowPassword" text="Show Password" />
-                  <Button fx:id="register_signupBtn" layoutX="39.0" layoutY="342.0" mnemonicParsing="false" onAction="#registerAccount" prefHeight="40.0" prefWidth="250.0" stylesheets="@../design/pageDesign.css" text="Sign Up">
+                  <CheckBox fx:id="register_checkBox" layoutX="39.0" layoutY="316.0" mnemonicParsing="false" onAction="#registerShowPassword" text="Show Password" />
+                  <Button fx:id="register_signupBtn" layoutX="39.0" layoutY="354.0" mnemonicParsing="false" onAction="#registerAccount" prefHeight="40.0" prefWidth="250.0" stylesheets="@../design/pageDesign.css" text="Sign Up">
                      <styleClass>
                         <String fx:value="btn-1" />
                         <String fx:value="radius" />
