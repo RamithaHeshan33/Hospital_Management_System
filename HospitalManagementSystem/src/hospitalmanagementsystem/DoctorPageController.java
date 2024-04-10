@@ -36,7 +36,7 @@ public class DoctorPageController implements Initializable{
     @FXML
     private TextField login_doctorID;
 
-    @FXML
+    @FXML //c
     private AnchorPane login_form;
 
     @FXML
