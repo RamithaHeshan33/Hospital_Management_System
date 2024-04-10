@@ -8,10 +8,17 @@ import com.sun.jdi.connect.spi.Connection;
 import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -19,6 +26,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
         
 public class DoctorPageController implements Initializable{
     
@@ -104,7 +112,81 @@ public class DoctorPageController implements Initializable{
 
     }
     
+    public void userList() {
+        List<String> listU = new ArrayList<>();
+        
+        for(String data: Users.user) {
+            listU.add(data);
+        }
+        
+        ObservableList listData = FXCollections.observableList(listU);
+        login_user.setItems(listData);
+    }
     
+    
+    public void switchPage() {
+        if(login_user.getSelectionModel().getSelectedItem() == "Admin Portal") {
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+                Stage stage = new Stage();
+                
+                stage.setTitle("Hospital Management System");
+                
+                stage.setMinWidth(340);
+                stage.setMinHeight(580);
+                
+                stage.setScene(new Scene(root));
+                stage.show();
+            }
+            
+            catch(Exception e) {
+                System.out.println(e);
+            }
+        }
+        
+        else if (login_user.getSelectionModel().getSelectedItem() == "Doctor Portal") {
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("DoctorPage.fxml"));
+                Stage stage = new Stage();
+                
+                stage.setTitle("Hospital Management System");
+                
+                stage.setMinWidth(340);
+                stage.setMinHeight(580);
+                
+                stage.setScene(new Scene(root));
+                stage.show();
+                
+                
+            }
+            
+            catch(Exception e) {
+                System.out.println(e);
+            }
+        }
+        
+        else if (login_user.getSelectionModel().getSelectedItem() == "Patient Portal") {
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("PatientPage.fxml"));
+                Stage stage = new Stage();
+                
+                stage.setTitle("Hospital Management System");
+                
+                stage.setMinWidth(340);
+                stage.setMinHeight(580);
+                
+                stage.setScene(new Scene(root));
+                stage.show();
+            }
+            
+            catch(Exception e) {
+                System.out.println(e);
+            }
+        }
+    
+        login_user.getScene().getWindow().hide();
+    
+    }
 
     @FXML
     void switchForm(ActionEvent event) {
