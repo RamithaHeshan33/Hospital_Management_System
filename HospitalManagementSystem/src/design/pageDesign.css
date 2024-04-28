@@ -30,8 +30,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     
 }
 
+.textfield-2 {
+    -fx-border-color: #000;
+    -fx-border-width: .3px;
+    -fx-font-family: Tahoma;
+}
+
+.textfield-2:focused {
+    -fx-border-color: linear-gradient(to bottom right,#a413a1,#64308e);
+    -fx-border-width: 1px;
+    
+}
+
 .btn-1 {
-    -fx-background-color: linear-gradient(to bottom right,#1ea6c4,#30419c);
+    -fx-background-color: linear-gradient(to bottom right,#a413a1,#64308e);
     -fx-cursor: hand;
     -fx-text-fill: #fff;
     -fx-font-size: 14px;
@@ -41,4 +53,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 .btn-1:hover {
     -fx-background-color: linear-gradient(to bottom right,#19a7d7,#495fcc);
+}
+
+.btn-2 {
+    -fx-background-color: linear-gradient(to bottom right,#a413a1,#64308e);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    
+}
+
+.btn-2:hover {
+    -fx-background-color: linear-gradient(to bottom right,#a413a1,#64308e);
 }
